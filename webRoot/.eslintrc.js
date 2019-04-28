@@ -26,5 +26,6 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'semi': ['error','always'], // 语块结尾要加分号
+    "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]
   }
 }
