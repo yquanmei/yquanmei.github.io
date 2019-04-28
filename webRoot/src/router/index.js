@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
+import HomePage from '@/components/HomePage';
 
 Vue.use(Router);
 
 const routes = [
   {
     path: '/',
-    name: 'HelloWorld',
-    component: HelloWorld
+    name: 'HomePage',
+    component: HomePage
   }
 ];
 
@@ -17,7 +17,7 @@ const router = new Router({
   routes: routes
 });
 
-router.afterEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
   document.title = to.name;
   next();
 });
